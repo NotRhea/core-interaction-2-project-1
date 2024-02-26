@@ -1,0 +1,40 @@
+body {background-color:rgb(237, 237, 228);
+    font-family: dupincel-variable, serif;
+color: rgb(0, 0, 0);
+max-width:10em ;
+padding-top: 2em;
+font-size: 1.5em;
+padding-left: 23em;
+}
+.one {font-size: 3em;
+margin-bottom: 1em;
+border-bottom: 5px solid black;}
+
+.button {font-family: dupincel-variable, serif;
+       
+           
+    border: solid black; 
+    color: black;
+    padding: 10px 20px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    cursor: pointer; 
+    border-radius: 20px; font-family:dupincel-variable, serif;
+    transition: background-color 0.3s ease;
+ 
+  margin-top: 2em;
+  }
+
+ 
+  .button:hover {
+    background-color: rgb(25, 36, 36); }
+
+@media screen and (max-width:1200px) {
+body {width: 10em;
+position:relative;
+padding-left: 5em;}
+
+
+}

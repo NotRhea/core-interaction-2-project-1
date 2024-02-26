@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Squares</title>
+    <style>
+        body, html {
+            background-color: black;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Start at the top for vertical movement */
+        }
+
+        .container {
+            position: absolute;
+            display: flex;
+            gap: 20px;
+        }
+
+        .horizontal {
+            flex-direction: row;
+            top: 50%; /* Center horizontally */
+            left: 0;
+            right: 0;
+            margin-top: -25px; /* Offset half the height to center */
+        }
+
+        .horizontal-2{
+            flex-direction: row;
+            top: 30%; /* Center horizontally */
+            left: 0;
+            right: 0;
+            margin-top: -25px; /* Offset half the height to center */
+        }
+
+        .vertical {
+            flex-direction: column;
+            left: 50%; /* Center vertically */
+            top: 0;
+            bottom: 0;
+            margin-left: -25px; /* Offset half the width to center */
+        }
+        .vertical-2 {
+            flex-direction: column;
+            left: 30%; /* Center vertically */
+            top: 0;
+            bottom: 0;
+            margin-left: -25px; /* Offset half the width to center */
+        }
+        .square {
+            width: 50px;
+            height: 50px;
+            border-radius:50%;
+            animation: moveUpDown 5s ease-in-out infinite alternate;
+        }
+
+        .horizontal .square {
+            animation: moveLeftRight 5s ease-in-out infinite alternate;
+        }
+
+        @keyframes moveUpDown {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(70vh);
+            }
+        }
+
+        @keyframes moveLeftRight {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(70vw);
+            }
+        }
+
+        .square:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container diangonal"><div class="square" style="background-color: #e74c3c;"></div>
+    <div class="square" style="background-color: #f6cfe9;"></div>
+    <div class="square" style="background-color: #ee9cd6;"></div>
+    <div class="square" style="background-color: #ec60d0;"></div>
+    <div class="square" style="background-color: #bd1eaf;"></div>
+    <div class="square" style="background-color: #980871;"></div>
+
+</div>
+    <div class="container vertical">
+        <div class="square" style="background-color: #f6cfe9;"></div>
+        <div class="square" style="background-color: #ee9cd6;"></div>
+        <div class="square" style="background-color: #ec60d0;"></div>
+        <div class="square" style="background-color: #bd1eaf;"></div>
+        <div class="square" style="background-color: #980871;"></div>
+    </div>
+
+    <div class="container vertical-2">
+        <div class="square" style="background-color: #f6cfe9;"></div>
+        <div class="square" style="background-color: #ee9cd6;"></div>
+        <div class="square" style="background-color: #ec60d0;"></div>
+        <div class="square" style="background-color: #bd1eaf;"></div>
+        <div class="square" style="background-color: #980871;"></div>
+    
+       </div>
+
+
+    <div class="container horizontal">
+        <div class="square" style="background-color: #f6cfe9;"></div>
+        <div class="square" style="background-color: #ee9cd6;"></div>
+        <div class="square" style="background-color: #ec60d0;"></div>
+        <div class="square" style="background-color: #bd1eaf;"></div>
+        <div class="square" style="background-color: #980871;"></div>
+   
+    
+    </div>
+
+    <div class="container horizontal-2">
+        <div class="square" style="background-color: #f6cfe9;"></div>
+        <div class="square" style="background-color: #ee9cd6;"></div>
+        <div class="square" style="background-color: #ec60d0;"></div>
+        <div class="square" style="background-color: #bd1eaf;"></div>
+        <div class="square" style="background-color: #980871;"></div>
+   
+     </div>
+</body>
+</html>

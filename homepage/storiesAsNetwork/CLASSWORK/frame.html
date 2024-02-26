@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viewport Hugging Divs</title>
+<style>
+    body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; 
+}
+
+.viewport-div {
+    position: fixed; 
+}
+
+.top {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px; 
+    background: blue;
+}
+
+.right {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    background: green;
+}
+
+.bottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px; /* Adjust as needed */
+    background: yellow; /* Primary color */
+}
+
+.left {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50px; /* Adjust as needed */
+    background: red; /* Primary color */
+}
+
+.center-column {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50px; /* Adjust based on the left div width */
+    right: 50px; /* Adjust based on the right div width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.center-column p {
+    margin: 10px 0; /* Spacing between paragraphs */
+}
+
+</style>
+</head>
+<body>
+    <div class="viewport-div top">Top</div>
+    <div class="viewport-div right">Right</div>
+    <div class="viewport-div bottom">Bottom</div>
+    <div class="viewport-div left">Left</div>
+    <div class="center-column">
+        <p>This is some center aligned text.</p>
+        <p>More center aligned text here.</p>
+    </div>
+</body>
+</html>
